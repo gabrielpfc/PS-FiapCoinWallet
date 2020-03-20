@@ -1,6 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace CoinWallet
 {
@@ -9,8 +7,7 @@ namespace CoinWallet
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new CoinWallet.LoginPage());
         }
 
         protected override void OnStart()
