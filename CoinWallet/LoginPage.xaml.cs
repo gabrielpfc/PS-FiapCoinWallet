@@ -15,22 +15,32 @@ namespace CoinWallet
         public LoginPage()
         {
             InitializeComponent();
-            //BotaoLogin.Clicked += LoginClicked;
-            BotaoLogin.Clicked += AbrirMenuClicked;
+            string[] valores = {
+                "Perfil Arrojado",
+                "Perfil Clássico",
+                "Perfil Arriscado" };
+            ListViewPerfis.ItemsSource = valores;
+
+            BotaoGravar.Clicked += BotaoClicked;
         }
 
 
-        public async void AbrirMenuClicked(Object o, EventArgs e)
+        public async void BotaoClicked(object o, EventArgs e)
         {
-            await Navigation.PushAsync(new MenuPage());
+
+            var mensagemPerfil = "Nenhum perfil selecionado";
+            if (ListViewPerfis.SelectedItem != null)
+                mensagemPerfil = ListViewPerfis.SelectedItem.ToString();
+
+            var mensagem = "Nome: " + EntryNome.Text + "\n" +
+                "Descrição: " + EditorDescricao.Text + "\n" +
+                "Idade: " + SliderIdade.Value.ToString() + "\n " +
+                "Patrimônio: " + StepPatrimonio.Value.ToString() + "\n" +
+                "Perfil: " + mensagemPerfil + " \n ";
+
+            await DisplayAlert("Descrição", mensagem, "Ok");
+
+
         }
-
-        //await Navigation.PushAsync(new MenuPage()); 
-
-        public void LoginClicked(Object o, EventArgs e)
-        {
-            DisplayAlert("Título", "Mensagem Teste", "Ok");
-        }
-
     }
 }
