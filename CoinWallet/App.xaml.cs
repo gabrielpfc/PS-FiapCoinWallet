@@ -7,7 +7,7 @@ namespace CoinWallet
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new CoinWallet.LoginPage());
+            MainPage = new NavigationPage(new CoinWallet.Views.PrincipalPage());
         }
 
         protected override void OnStart()
