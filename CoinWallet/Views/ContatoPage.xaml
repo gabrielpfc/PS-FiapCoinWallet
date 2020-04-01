@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CoinWallet.Views.ContatoPage"
              Title="Contato"
-             BackgroundColor="AliceBlue">
+             BackgroundColor="#87cade">
 
     <ContentPage.Content>
         <StackLayout>

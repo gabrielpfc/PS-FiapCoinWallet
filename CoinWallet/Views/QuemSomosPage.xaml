@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CoinWallet.Views.QuemSomosPage" 
              Title="Quem somos"
-             BackgroundColor="Cyan">
+             BackgroundColor="#87cade">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Quem Somos" FontSize="Large"
